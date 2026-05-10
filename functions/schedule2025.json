@@ -1,0 +1,114 @@
+[
+  {
+    "logofile": "um",
+    "location": "at",
+    "opponent": "University of Maine",
+    "date": "Oct 3, 5 PM",
+    "score": "W 5-2"
+  },
+  {
+    "logofile": "dartmouth",
+    "location": "at",
+    "opponent": "Dartmouth College",
+    "date": "Oct 4, 5 PM",
+    "score": "W 7-1"
+  },
+  {
+    "logofile": "une",
+    "location": "at",
+    "opponent": "University of New England",
+    "date": "Oct 19, 1 PM",
+    "score": "W 5-2"
+  },
+  {
+    "logofile": "thomas",
+    "location": "vs",
+    "opponent": "Thomas College",
+    "date": "Oct 22, 8:30 PM",
+    "score": "W 4-2"
+  },
+  {
+    "logofile": "cmcc",
+    "location": "at",
+    "opponent": "Central Maine Community College",
+    "date": "Oct 24, 6:45 PM",
+    "score": "L 2-7"
+  },
+  {
+    "logofile": "une",
+    "location": "vs",
+    "opponent": "University of New England",
+    "date": "Nov 2, 4:30 PM",
+    "score": ""
+  },
+  {
+    "logofile": "nau",
+    "location": "vs",
+    "opponent": "Northern Arizona University",
+    "date": "Nov 7, 7 PM",
+    "score": "W 10-1"
+  },
+  {
+    "logofile": "nau",
+    "location": "vs",
+    "opponent": "Northern Arizona University",
+    "date": "Nov 8, 7 PM",
+    "score": "W 8-4"
+  },
+  {
+    "logofile": "dartmouth",
+    "location": "vs",
+    "opponent": "Dartmouth College",
+    "date": "Nov 9, 4:30 PM",
+    "score": "L 2-3"
+  },
+  {
+    "logofile": "umass",
+    "location": "vs",
+    "opponent": "University of Massachusetts",
+    "date": "Nov 13, 8:45 PM",
+    "score": "L 2-4"
+  },
+  {
+    "logofile": "um",
+    "location": "vs",
+    "opponent": "University of Maine",
+    "date": "Dec 4, 6:30 PM",
+    "score": ""
+  },
+  {
+    "logofile": "bates",
+    "location": "at",
+    "opponent": "Bates College",
+    "date": "Dec 6, 3 PM",
+    "score": ""
+  },
+  {
+    "logofile": "bates",
+    "location": "at",
+    "opponent": "Bates College",
+    "date": "Jan 18, TBD",
+    "score": ""
+  },
+  {
+    "logofile": "thomas",
+    "location": "at",
+    "opponent": "Thomas College",
+    "date": "Feb 5, 8 PM",
+    "score": ""
+  },
+  {
+    "logofile": "cmcc",
+    "location": "vs",
+    "opponent": "Central Maine Community College",
+    "date": "Feb 12, 8 PM",
+    "score": ""
+  },
+  {
+    "logofile": "unh",
+    "location": "vs",
+    "opponent": "University of New Hampshire",
+    "date": "Feb 15, 2 PM",
+    "score": ""
+  }
+]
