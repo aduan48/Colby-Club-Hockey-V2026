@@ -1,0 +1,275 @@
+[
+    {
+      "name": "Joe Faiman",
+      "number": "1",
+      "position": "F",
+      "height": "5-7",
+      "weight": "170",
+      "hand": "R",
+      "town": "Lawrence, NJ"
+    },
+    {
+      "name": "John Bloomer",
+      "number": "2",
+      "position": "F",
+      "height": "5-8",
+      "weight": "180",
+      "hand": "L",
+      "town": "Chicago, IL"
+    },
+    {
+      "name": "Nolan Marsters",
+      "number": "3",
+      "position": "D",
+      "height": "5-9",
+      "weight": "175",
+      "hand": "R",
+      "town": "East Falmouth, MA"
+    },
+    {
+      "name": "Andres Ramos",
+      "number": "4",
+      "position": "F",
+      "height": "6-2",
+      "weight": "175",
+      "hand": "L",
+      "town": "New York, NY"
+    },
+    {
+      "name": "Jace Gangadharan",
+      "number": "5",
+      "position": "F",
+      "height": "5-11",
+      "weight": "175",
+      "hand": "R",
+      "town": "Brookline, MA"
+    },
+    {
+        "name": "Alex Holmgren",
+        "number": "6",
+        "position": "D",
+        "height": "6-1",
+        "weight": "185",
+        "hand": "R",
+        "town": "St. Augustine, FL"
+    },
+    {
+        "name": "Eli Weinberger",
+        "number": "7",
+        "position": "D",
+        "height": "6-4",
+        "weight": "205",
+        "hand": "R",
+        "town": "Brooklyn, NY"
+    },
+    {
+      "name": "Max Viera",
+      "number": "8",
+      "position": "D",
+      "height": "6-4",
+      "weight": "200",
+      "hand": "L",
+      "town": "Gloucester, MA"
+    },
+    {
+      "name": "Bear Brooks",
+      "number": "9",
+      "position": "F",
+      "height": "5-10",
+      "weight": "150",
+      "hand": "R",
+      "town": "Newbury, MA"
+    },
+    {
+      "name": "Alex Duan",
+      "number": "10",
+      "position": "D",
+      "height": "6-0",
+      "weight": "185",
+      "hand": "R",
+      "town": "Needham, MA"
+    },
+    {
+      "name": "Miles English",
+      "number": "11",
+      "position": "D",
+      "height": "6-2",
+      "weight": "185",
+      "hand": "R",
+      "town": "New Canaan, CT"
+    },
+    {
+      "name": "Josh Corliss",
+      "number": "12",
+      "position": "F",
+      "height": "5-10",
+      "weight": "185",
+      "hand": "R",
+      "town": "Natick, MA"
+    },
+    {
+        "name": "Aidan Kwok",
+        "number": "13",
+        "position": "D",
+        "height": "6-0",
+        "weight": "190",
+        "hand": "R",
+        "town": "Emerald Hills, CA"
+    },
+    {
+      "name": "Ewan Ward",
+      "number": "14",
+      "position": "F",
+      "height": "5-9",
+      "weight": "145",
+      "hand": "L",
+      "town": "Rye, NY"
+    },
+    {
+      "name": "Riley Van Son",
+      "number": "15",
+      "position": "F",
+      "height": "6-5",
+      "weight": "215",
+      "hand": "R",
+      "town": "Halesite, NY"
+    },
+    {
+        "name": "Sawyer Dillon",
+        "number": "16",
+        "position": "D",
+        "height": "6-2",
+        "weight": "175",
+        "hand": "L",
+        "town": "Oldwick, NJ"
+    },
+    {
+      "name": "Thomas Moreau",
+      "number": "17",
+      "position": "F",
+      "height": "5-7",
+      "weight": "170",
+      "hand": "R",
+      "town": "Madison, WI"
+    },
+    {
+      "name": "Matty Makili",
+      "number": "18",
+      "position": "F",
+      "height": "5-6",
+      "weight": "150",
+      "hand": "L",
+      "town": "Kittery Point, ME"
+    },
+    {
+      "name": "Mitchell Ham",
+      "number": "24",
+      "position": "F",
+      "height": "5-9",
+      "weight": "160",
+      "hand": "L",
+      "town": "Falmouth, ME"
+    },
+    {
+        "name": "Henry Stone",
+        "number": "20",
+        "position": "D",
+        "height": "5-9",
+        "weight": "165",
+        "hand": "R",
+        "town": "Milwaukee, WI"
+    },
+    {
+      "name": "Connor Roach",
+      "number": "21",
+      "position": "F",
+      "height": "6-2",
+      "weight": "195",
+      "hand": "R",
+      "town": "Boca Raton, FL"
+    },
+    {
+      "name": "Spencer Lee",
+      "number": "22",
+      "position": "F",
+      "height": "6-1",
+      "weight": "190",
+      "hand": "R",
+      "town": "Fair Haven, NJ"
+    },
+    {
+      "name": "Christian Konstantino",
+      "number": "23",
+      "position": "F",
+      "height": "6-2",
+      "weight": "185",
+      "hand": "R",
+      "town": "Yarmouth, ME"
+    },
+
+    {
+        "name": "Santino Defazio",
+        "number": "24",
+        "position": "D",
+        "height": "5-2",
+        "weight": "200",
+        "hand": "L",
+        "town": "Colinsville, CT"
+    },
+    {
+      "name": "Brendan Keogh",
+      "number": "25",
+      "position": "F",
+      "height": "6-1",
+      "weight": "175",
+      "hand": "L",
+      "town": "New Canaan, CT"
+    },
+    {
+      "name": "Ryan Harper",
+      "number": "26",
+      "position": "F",
+      "height": "5-8",
+      "weight": "145",
+      "hand": "R",
+      "town": "Southborough, MA"
+    },
+    {
+      "name": "Brendan Bullock",
+      "number": "27",
+      "position": "F",
+      "height": "5-10",
+      "weight": "170",
+      "hand": "R",
+      "town": "Lake Placid, NY"
+    },
+    {
+      "name": "James Reilly",
+      "number": "29",
+      "position": "F",
+      "height": "5-10",
+      "weight": "170",
+      "hand": "R",
+      "town": "Basking Ridge, NJ"
+    },
+    {
+        "name": "Cooper Steinborn",
+        "number": "30",
+        "position": "G",
+        "height": "5-11",
+        "weight": "160",
+        "hand": "R",
+        "town": "Lexington, MA"
+    },
+    {
+        "name": "Gabriel Emerick",
+        "number": "31",
+        "position": "G",
+        "height": "6-0",
+        "weight": "175",
+        "hand": "L",
+        "town": "Plympton, MA"
+    }
+      ]
+   
+  

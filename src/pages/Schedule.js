@@ -22,11 +22,26 @@ import oakland from '../assets/opponent-logo/oaklanduniversity.png';
 import mines from '../assets/opponent-logo/coloradoschoolofmines.png'
 import nau from '../assets/opponent-logo/nau.png'
 import acha2024 from '../assets/opponent-logo/acha2024.png';
+
 function Schedule() {
     //add wins, losses, etc once database table is set up
-    const [schedule, setSchedule] = useState();
+    const [schedule, setSchedule] = useState([]);
     const [scheduleYear, setScheduleYear] = useState("2025")
-    const [scroll, setScroll] = useState(window.scrollY);
+    const [scroll, setScroll] = useState(0);
+    const stats = schedule.reduce((acc, game) =>{
+        const result = game.score ? game.score.charAt(0).toUpperCase() : null;
+        if (result === 'W') acc.wins++;
+        else if (result === 'L') acc.losses++;
+        else if (result === 'T') acc.ties++;
+        
+        if (result) acc.gp++; // Only count Games Played if there is a score
+        return acc;
+    }, { wins: 0, losses: 0, ties: 0, gp: 0 })
+
+    const winPercentage = stats.gp > 0 
+        ? ((stats.wins / stats.gp) * 100).toFixed(1) 
+        : 0;
+
     const image = {
         'bates':bates,
         'cmcc': cmcc,
@@ -47,31 +62,32 @@ function Schedule() {
         'mines': mines,
         'nau': nau
     };
-    const handleScroll = () => {
-        setScroll(window.scrollY);
-    }
     useEffect(() => {
-        async function getSchedule() {
+        const handleScroll = () => setScroll(window.scrollY);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    useEffect(() => {
+        async function fetchData() {
             try {
-                const response = await fetch(`https://colbyclubhockey.com/.netlify/functions/getschedule?year=${scheduleYear}`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                    }
-                });
+                // The URL is always this path relative to your domain
+                const response = await fetch(`/.netlify/functions/getschedule?year=${scheduleYear}`);
+                
                 if (response.ok) {
                     const data = await response.json();
                     setSchedule(data);
+                } else {
+                    console.error("Server responded with an error");
                 }
-            }
-            catch (error) {
-                console.error('Schedule could not be loaded', error);
+            } catch (error) {
+                console.error('Network error - check if netlify dev is running', error);
             }
         }
-        getSchedule();
-    }, [scheduleYear])
+        fetchData();
+    }, [scheduleYear]);
 
-    window.addEventListener('scroll', handleScroll);
+
     function game(logo, homeAway, opponent, date, score) {
         return (
             <tr className='row'>
@@ -97,24 +113,51 @@ function Schedule() {
 
     return (
         <>
+
             <div className='background-container'>
                 <img src={frontRink} className={scroll < 3500 ? (scroll > 1600 ? 'image background active' : 'image background') : 'image background'} />
             </div>
             <header id='Schedule' className='section-header'>Schedule</header>
-            <select className="dropdown" onChange={handleChange} value = {scheduleYear}>
+
+
+
+            <select className="dropdown" onChange={(e) => setScheduleYear(e.target.value)} value={scheduleYear}>
                 <option value="2025">2025 - 2026</option>
                 <option value="2024">2024 - 2025</option>
-                <option value= "2023">2023 - 2024</option>
+                <option value="2023">2023 - 2024</option>
             </select>
+
+            <div className="stats-bar">
+                <div className="stat-item">
+                    <span className="stat-label">Record: </span>
+                    <span className="stat-value">{stats.wins}-{stats.losses}-{stats.ties}</span>
+                </div>
+                <div className="stat-item">
+                    <span className="stat-label">GP: </span>
+                    <span className="stat-value">{stats.gp}</span>
+                </div>
+                <div className="stat-item">
+                    <span className="stat-label">Win %: </span>
+                    <span className="stat-value">{winPercentage}%</span>
+                </div>
+            </div>
+
             <div className='schedule-roster'>
                 <table>
                     <tbody>
-                    {/* {game('unelogo.png', 'at', 'University of New England', 'Jan 27/ 3 pm', 'W 9-1')}
-                    {game('unelogo.png', 'at', 'University of New England', 'Jan 27/ 3 pm', 'W 9-1')} */}
-                        {schedule? Object.entries(schedule).map(([id, opponent])=>{
-                            return game(image[opponent['logofile']], opponent['location'], opponent['opponent'], opponent['date'], opponent['score']);
-                        }):null}
-
+                        {schedule.length > 0 ? (
+                            schedule.map((gameData, index) => (
+                                game(
+                                    image[gameData.logofile] || acha2024, // Fallback if image missing
+                                    gameData.location, 
+                                    gameData.opponent, 
+                                    gameData.date, 
+                                    gameData.score
+                                )
+                            ))
+                        ) : (
+                            <tr><td colSpan="5" style={{color: 'white'}}>Loading {scheduleYear} Schedule...</td></tr>
+                        )}
                     </tbody>
                 </table>
             </div>

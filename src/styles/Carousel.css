@@ -1,0 +1,22 @@
+.carousel {
+    width: 70%;
+    overflow: hidden; /* Keeps the container clean */
+    border-radius: 12px; /* Optional: makes it look a bit more modern */
+    margin: 0 auto;
+}
+
+.carousel-image {
+    display: block; /* Removes bottom whitespace and helps sizing */
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* This is the key: it crops instead of stretching */
+    object-position: center; 
+}
+
+.carousel-3d-container {
+    width: 100%;
+    margin-bottom: 0px;
+    height: 60vh; /* This controls how much space the 3D scene takes up */
+    background: transparent; /* Or #021a4a to match your puck scene */
+    overflow: hidden;
+}

@@ -1,0 +1,108 @@
+/* FloatingPuck.css */
+.puck-container {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  background-color: var(--darker-primary); /* Colby Blue fallback */
+  overflow: hidden;
+}
+
+.puck-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none; /* Crucial: allows you to still click/drag the 3D puck */
+  text-align: center;
+  width: 100%;
+}
+
+.puck-title {
+  font-size: clamp(2rem, 3vw, 3rem); /* Responsive text size */
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 5px;
+  font-weight: 3000;
+  margin-bottom: -18px;
+}
+
+.puck-overlay button {
+  background-color: var(--primary);
+  color: white;
+  border: 2px solid white; /* Adding a border makes it pop more */
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.puck-subtitle {
+  font-size: 1.2rem;
+  color: #adadad;
+  letter-spacing: 2px;
+}
+
+/* Center Text Styles */
+.puck-overlay-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  text-align: center;
+  width: 100%;
+}
+
+/* Bottom Button Styles */
+.puck-overlay-bottom {
+  position: absolute;
+  bottom: 10%; /* Distance from the bottom of the screen */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  text-align: center;
+  width: 100%;
+  /* Note: We DO NOT add pointer-events: none here because we want to click the button */
+}
+
+/* Specific Button Styles */
+.watch-live-btn {
+  background-color: transparent; /* Or #002855 for solid */
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 45px;
+  pointer-events: auto; /* Ensures the button is clickable */
+}
+
+.watch-live-btn:hover {
+  background-color: white;
+  color: #002855; /* Inverts colors on hover */
+}
+
+.puck-title {
+  font-size: clamp(2rem, 8vw, 6.8em);
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 5px;
+  font-weight: 900; /* Max for standard fonts is 900 */
+  margin-bottom: -10px;
+}
+
+.puck-subtitle {
+  font-size: 1.2rem;
+  color: #adadad;
+  letter-spacing: 2px;
+}

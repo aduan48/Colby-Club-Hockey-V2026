@@ -1,11 +1,13 @@
 import '../styles/About.css';
+import Carousel from '../components/PhotoCarousel'
 //import rink from './images/siderink.jpg';
 //import huddle from './images/huddle.jpg';
 
 function About() {
   return (
     <div id="about-section">
-      <header id="About" className='section-header'>About</header>
+      <header id="About" className='section-header'>About Us</header>
+            <Carousel className = 'carousel'/>
       <div className='about'>
         <div className="about-item">
           <div>

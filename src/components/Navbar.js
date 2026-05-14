@@ -26,7 +26,7 @@ function Navbar() {
           <img src={Logo} alt="Logo" />
         </div>
           <div className='hiddenLinks'>
-            <Link to ="/" onClick={() => scrollToSection('headerContainer')}>  HOME </Link>
+            <Link to ="/home" onClick={() => scrollToSection('puck-title')}>  HOME </Link>
           <Link to ="/schedule">  SCHEDULE  </Link>
           <Link to="/#about-section" onClick={() => scrollToSection('about-section')}> ABOUT </Link>
           <Link to ="/contact" onClick={() => scrollToSection('Contact Us')}>  CONTACT  </Link>
@@ -34,7 +34,7 @@ function Navbar() {
         </div>
       </div>
       <div className='rightSide'> 
-        <Link to ="/" onClick={() => scrollToSection('headerContainer')}>  HOME </Link>
+        <Link to ="/home" onClick={() => scrollToSection('puck-title')}>  HOME </Link>
         <Link to ="/schedule">  SCHEDULE </Link>
         <Link to ="/#about-section" onClick={() => scrollToSection('about-section')}>  ABOUT  </Link>
         <Link to ="/contact" onClick={() => scrollToSection('Contact Us')}>  CONTACT  </Link>

@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   height: 70px;
-  background-color: #002877;
+  background: linear-gradient(to right, #1e56c7, #001a4d);
   display: flex;
   flex-direction: row;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

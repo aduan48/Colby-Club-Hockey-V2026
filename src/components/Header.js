@@ -1,5 +1,5 @@
 import React from 'react'
-import TeamPhoto from '../assets/Homepage.jpg'
+import TeamPhoto from '../assets/kwok.jpg'
 import '../styles/Header.css'
 
 function Header() {
