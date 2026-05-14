@@ -29,7 +29,7 @@ function Schedule() {
     const [scheduleYear, setScheduleYear] = useState("2025")
     const [scroll, setScroll] = useState(0);
     const stats = schedule.reduce((acc, game) =>{
-        const result = game.score ? game.score.charAt(0).toUpperCase() : null;
+        const result = (game.score && typeof game.score === 'string') ? game.score.trim().charAt(0).toUpperCase() : null;
         if (result === 'W') acc.wins++;
         else if (result === 'L') acc.losses++;
         else if (result === 'T') acc.ties++;
@@ -72,7 +72,7 @@ function Schedule() {
         async function fetchData() {
             try {
                 // The URL is always this path relative to your domain
-                const response = await fetch(`/.netlify/functions/getschedule?year=${scheduleYear}`);
+                const response = await fetch(`https://colbyclubhockey.com/.netlify/functions/getschedule?year=${scheduleYear}`);
                 
                 if (response.ok) {
                     const data = await response.json();
