@@ -12,16 +12,30 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // This waits for the window "load" event (all images, scripts, etc. are ready)
-    const handleLoad = () => setLoading(false);
-    
-    if (document.readyState === 'complete') {
+    // 1. Define the timer
+    const timer = setTimeout(() => {
       setLoading(false);
+    }, 2500);
+
+    // 2. Optional: If you want to ensure it ONLY disappears 
+    // after BOTH the timer is done AND the window is loaded:
+    const handleLoad = () => {
+      // You could add logic here if you wanted to wait for heavy assets
+    };
+
+    if (document.readyState === 'complete') {
+      // Page is already ready, the timeout above will handle the exit
     } else {
       window.addEventListener('load', handleLoad);
-      return () => window.removeEventListener('load', handleLoad);
     }
+
+    // 3. Cleanup (Very important to prevent memory leaks)
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
+
 
   if (loading) {
     return (
