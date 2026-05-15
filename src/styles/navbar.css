@@ -84,18 +84,24 @@
   display: none;
 }
 
+.navbar #open .logoContainer, 
+.navbar #open img {
+  display: flex !important; /* Forces it to stay visible when open */
+}
+
 
 
 .navbar #open a {
   width: 70px;
   margin: 5px;
 }
-@media only screen and (max-width: 900px) {
-  .navbar .rightSide a {
-    width: 70px;
+@media only screen and (max-width: 1000px) {
+  .navbar a {
+    margin: 10px;    /* Reduced from 20px */
+    font-size: 14px; /* Slightly smaller text */
   }
   .navbar .leftSide {
-    padding-left: 50px;
+    margin-left: 10px; /* Bring logo closer to edge to save space */
   }
 }
 
