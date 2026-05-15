@@ -58,7 +58,7 @@ body {
   animation: fadeInPage 0.8s ease-in-out;
 }
 
-/* The Container */
+/* The Container stays the same for that nice radial background */
 .loading-screen {
   position: fixed;
   top: 0;
@@ -67,55 +67,34 @@ body {
   height: 100vh;
   background: radial-gradient(circle, var(--darker-primary) 0%, #010a1d 100%);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
-/* Styled Loader */
-.loader {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  /* Creates a sleek gradient ring */
-  background: conic-gradient(transparent, white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: spin 0.8s linear infinite;
-  box-shadow: 0 0 20px rgba(253, 253, 253, 0.2);
+/* The Pulsing Mule Logo */
+.mule-pulse-logo {
+  width: 250px; /* Adjust size based on your image dimensions */
+  height: auto;
+  max-width: 80%; /* Ensures it fits on mobile screens */
+  animation: logo-pulse 2s ease-in-out infinite;
+  /* Adds a subtle "ice" glow to the logo */
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
 }
 
-/* The "Inner Core" to make it a ring */
-.loader::before {
-  content: '';
-  position: absolute;
-  inset: 8px; /* Thickness of the ring */
-  background: var(--darker-primary);
-  border-radius: 50%;
-}
-
-/* The Pulsing Glow Text */
-.loading-screen h1 {
-  margin-top: 25px;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.3rem;
-  color: var(--secondary);
-  animation: pulse-text 1.5s ease-in-out infinite;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-/* Keyframes */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes pulse-text {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
+/* Keyframes for the Pulse effect */
+@keyframes logo-pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
 }

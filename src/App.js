@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Schedule from './pages/Schedule'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import muleLogo from './assets/frontpuck1.png'
 
 function App() {
 
@@ -41,7 +42,7 @@ function App() {
     return (
       <div className="loading-screen">
         <div className="loader"></div>
-        <h1>Colby Club Hockey</h1>
+        <img src = {muleLogo} className="mule-pulse-logo" alt= "mule logo" />
       </div>
     );
   }

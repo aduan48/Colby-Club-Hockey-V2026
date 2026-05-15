@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   padding-left: 0;    /* Changed to 0 so the white strip can start where you want */
-  margin-left: 50px; /* Use margin instead if you want space before the strip starts */
+  margin-left: 0px; /* Use margin instead if you want space before the strip starts */
 }
 
 .navbar .leftSide img {
@@ -61,7 +61,7 @@
 }
 
 .navbar #open {
-  padding-left: 0px;
+  padding-left: 50px;
 }
 .navbar #open img {
   display: none;
@@ -107,10 +107,6 @@
     display: none;
   }
 
-  /* Reset left side for mobile so it hits the edge */
-  .navbar .leftSide {
-    margin-left: 0; 
-  }
 
   /* Make sure the logo strip doesn't have extra padding on tiny screens */
   .navbar .leftSide .logoContainer {
@@ -126,7 +122,7 @@
   .navbar #open .hiddenLinks {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 110%;
     height: auto;
     position: absolute;
     top: 70px; /* Sits exactly below the 70px navbar */
@@ -135,6 +131,7 @@
     z-index: 10;
     padding-bottom: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: -50px;
   }
 
   /* Styling individual links in the pop-out */
@@ -145,6 +142,7 @@
     padding: 15px 0;
     font-size: 1.2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-left: 25px;
   }
 
   /* Keep the logo visible while menu is open */
