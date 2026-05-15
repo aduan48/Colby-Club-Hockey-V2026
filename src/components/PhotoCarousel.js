@@ -69,7 +69,7 @@ function PhotoCarousel() {
 
                 <directionalLight 
                     position={[5, 5, 10]} 
-                    intensity={3.5} 
+                    intensity={3} 
                  />
 
                 <Suspense fallback={null}>
