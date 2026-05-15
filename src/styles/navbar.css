@@ -107,6 +107,16 @@
     display: none;
   }
 
+  /* Reset left side for mobile so it hits the edge */
+  .navbar .leftSide {
+    margin-left: 0; 
+  }
+
+  /* Make sure the logo strip doesn't have extra padding on tiny screens */
+  .navbar .leftSide .logoContainer {
+    padding: 0 10px; 
+  }
+
   .navbar .rightSide button {
     display: flex; /* Show the hamburger icon */
     align-items: center;
