@@ -54,7 +54,7 @@ function CarouselScene({ photos }) {
 
 function PhotoCarousel() {
 
-    const [photos, setPhotos]=useState([carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel7, carousel8]);
+    const [photos]=useState([carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel7, carousel8]);
 
     return (
         <div className="carousel-3d-container" style={{ width: '100%', height: '80vh', marginTop: '-20px' }}>

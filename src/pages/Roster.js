@@ -5,7 +5,6 @@ import {useState, useEffect } from 'react';
 function Roster() {
     const [roster, setRoster] = useState();
     const [rosterYear, setRosterYear] = useState("2025")
-    const [scroll, setScroll] = useState(0);
     useEffect(() => {
         async function getRoster() {
             try {
@@ -34,7 +33,7 @@ function Roster() {
                 <td className="player-data">{position}</td>
                 <td className="player-data">{height}</td>
                 <td className="player-data">{weight}</td>
-                <td className="player-data">{hand}</td> 
+                <td className="player-data">{hand}</td>
                 <td className="player-data">{town}</td>
             </tr>
         )
@@ -42,12 +41,6 @@ function Roster() {
     const handleChange = (event)=>{
         setRosterYear(event.target.value);
     }
-
-    useEffect(() => {
-        const handleScroll = () => setScroll(window.scrollY);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     return (
         <>
@@ -60,7 +53,7 @@ function Roster() {
             </select>
             <div className='schedule-roster'>
                 <table className='player-table'>
-                    <tbody> 
+                    <tbody>
                         {info('Player', '#', 'Pos', 'Ht', 'Wt', 'Sh', 'Birthplace')}
                         {roster? Object.entries(roster).map(([id, player]) => {
                             return info(player['name'], player['number'], player['position'], player['height'], player['weight'], player['hand'], player['town']);
