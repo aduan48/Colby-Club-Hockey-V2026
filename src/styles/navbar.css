@@ -131,7 +131,6 @@
     z-index: 10;
     padding-bottom: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-left: -25px;
   }
 
   /* Styling individual links in the pop-out */
@@ -142,7 +141,6 @@
     padding: 15px 0;
     font-size: 1.2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    margin-left: 25px;
   }
 
   /* Keep the logo visible while menu is open */
