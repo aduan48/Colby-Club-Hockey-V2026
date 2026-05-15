@@ -72,7 +72,7 @@ function Schedule() {
         async function fetchData() {
             try {
                 // The URL is always this path relative to your domain
-                const response = await fetch(`https://colbyclubhockey.com/.netlify/functions/getschedule?year=${scheduleYear}`);
+                const response = await fetch(`/.netlify/functions/getschedule?year=${scheduleYear}`);
                 
                 if (response.ok) {
                     const data = await response.json();
