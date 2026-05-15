@@ -26,11 +26,11 @@ function Navbar() {
           <img src={Logo} alt="Logo" />
         </div>
           <div className='hiddenLinks'>
-            <Link to ="/home" onClick={() => scrollToSection('puck-title')}>  HOME </Link>
-          <Link to ="/schedule">  SCHEDULE  </Link>
-          <Link to="/#about-section" onClick={() => scrollToSection('about-section')}> ABOUT </Link>
-          <Link to ="/contact" onClick={() => scrollToSection('Contact Us')}>  CONTACT  </Link>
-          
+           <Link to="/home" onClick={() => { scrollToSection('puck-title'); toggleNavbar(); }}> HOME </Link>
+          <Link to="/schedule" onClick={toggleNavbar}> SCHEDULE </Link>
+          <Link to="/#about-section" onClick={() => { scrollToSection('about-section'); toggleNavbar(); }}> ABOUT </Link>
+          <Link to="/contact" onClick={() => { scrollToSection('Contact Us'); toggleNavbar(); }}> CONTACT </Link>
+          <a href='https://colbyathletics.com/sports/2021/11/17/giving-friends-of-recreation.aspx' onClick={toggleNavbar}> DONATE </a>
         </div>
       </div>
       <div className='rightSide'> 

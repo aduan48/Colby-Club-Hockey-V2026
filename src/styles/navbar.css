@@ -6,7 +6,7 @@
   flex-direction: row;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
+ 
 .navbar .leftSide .logoContainer {
   background-color: white;
   display: flex;
@@ -99,26 +99,55 @@
   }
 }
 
+/* Mobile Logic (Screen size 600px and below) */
 @media only screen and (max-width: 600px) {
+  
+  /* Hide the standard desktop links */
   .navbar .rightSide a {
     display: none;
   }
 
-  .navbar .rightSide {
-    justify-content: flex-end;
-    padding-right: 50px;
+  .navbar .rightSide button {
+    display: flex; /* Show the hamburger icon */
+    align-items: center;
   }
 
-  .navbar .rightSide button {
-    display: inherit;
+  /* The Pop-out Menu Container */
+  .navbar #open .hiddenLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 70px; /* Sits exactly below the 70px navbar */
+    left: 0;
+    background-color: #001a4d; /* Matches your dark blue */
+    z-index: 10;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Styling individual links in the pop-out */
+  .navbar #open a {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Keep the logo visible while menu is open */
+  .navbar #open .logoContainer, 
+  .navbar #open img {
+    display: flex;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
   .navbar .rightSide button {
     display: none;
   }
-
   .hiddenLinks {
     display: none;
   }
