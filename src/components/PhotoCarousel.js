@@ -1,4 +1,4 @@
-import React, { useRef, Suspense, useState, useEffect } from 'react';
+import React, { useRef, Suspense, useState} from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import carousel1 from '../assets/cooper.jpg'
@@ -55,18 +55,6 @@ function CarouselScene({ photos }) {
 function PhotoCarousel() {
 
     const [photos, setPhotos]=useState([carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel7, carousel8]);
-    const [currentPhoto, setCurrentPhoto] = useState(photos[0]);
-    const [count, setCount] = useState(0);
-    setTimeout(()=>{
-        if (count+1>=photos.length){
-            setCurrentPhoto(photos[0]);
-            setCount(0);
-        }
-        else{
-            setCurrentPhoto(photos[count+1]);
-            setCount(count+1);
-        }
-    }, 5000);
 
     return (
         <div className="carousel-3d-container" style={{ width: '100%', height: '80vh', marginTop: '-20px' }}>

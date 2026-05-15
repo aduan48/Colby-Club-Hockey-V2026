@@ -94,28 +94,25 @@ function Schedule() {
                 <td><img className='schedule-logo' src={logo} alt={`${opponent} Logo`}/></td>
                 <td className='center'>
                 {homeAway === 'nationals' ? (
-                    <img className='schedule-logo' src={acha2024} />
+                    <img className='schedule-logo' src={acha2024} alt = "" />
                 ) : homeAway === 'necha' ? (
-                    <img className='schedule-logo' src={necha} />
+                    <img className='schedule-logo' src={necha} alt = "" />
                 ) : (
                     <span className={homeAway}>{homeAway}</span>
                 )}
                 </td>
                 <td>{opponent}</td>
                 <td>{date}</td>
-                <td className={score.charAt(0) == 'W' ? 'win' : score.charAt(0) == 'L' ? 'loss' : ''}>{score}</td>
+                <td className={score.charAt(0) === 'W' ? 'win' : score.charAt(0) === 'L' ? 'loss' : ''}>{score}</td>
             </tr>
         )
-    }
-    const handleChange = (event)=>{
-        setScheduleYear(event.target.value);
     }
 
     return (
         <>
 
             <div className='background-container'>
-                <img src={frontRink} className={scroll < 3500 ? (scroll > 1600 ? 'image background active' : 'image background') : 'image background'} />
+                <img src={frontRink} className={scroll < 3500 ? (scroll > 1600 ? 'image background active' : 'image background') : 'image background'} alt = ""/>
             </div>
             <header id='Schedule' className='section-header'>Schedule</header>
 

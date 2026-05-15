@@ -1,14 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect} from 'react'
 import { useLocation } from 'react-router-dom';
 import About from './About'
 import Contact from './Contact'
-import Header from '../components/Header'
-import Schedule from './Schedule'
 import Roster from './Roster'
 import Puck from '../components/FloatingPuck'
-import { Canvas, useFrame } from '@react-three/fiber'
-import Carousel from '../components/PhotoCarousel'
-
 import '../styles/Home.css'
 
 

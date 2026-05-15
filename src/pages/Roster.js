@@ -1,7 +1,6 @@
 import '../styles/Table.css';
 //technically already imported in schedule.js, but this is where css styling for className = schedule-rsoter comes from
 import '../styles/Roster.css';
-import frontRink from '../assets/frontrink.jpg'
 import {useState, useEffect } from 'react';
 function Roster() {
     const [roster, setRoster] = useState();
