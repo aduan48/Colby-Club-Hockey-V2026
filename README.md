@@ -1,10 +1,12 @@
 # Colby Club Hockey
 
-A modern React-based web application built for the Colby Club Hockey organization. This project features a responsive layout, a persistent user contact form using React hooks paired with Netlify forms backend, and dynamic smooth scrolling.
+A modern React-based web application built for the Colby Club Hockey organization. This project features a responsive layout, a persistent user contact form using React hooks paired with Netlify forms backend, Paypal SDK, and dynamic smooth scrolling.
 
 ## 🚀 Features
 
 Responsive Contact Form: Fully integrated with Netlify forms for serverless submission tracking.
+
+Register Form: Fully integrated and sends forms to a google sheet as well as integrated PayPal SDK for payment.
 
 State Persistence: Leverages local storage via custom React hooks (useStorageState) to preserve user input across page refreshes.
 
@@ -12,13 +14,11 @@ Smooth Navigation: Custom viewport offset scrolling to account for fixed header 
 
 Clean UI: Modern, accessible styling using flexbox/grid structures and CSS variables.
 
-3d Elements: using react 3d
-
 ## 🛠️ Built With
 
-Frontend: React (JavaScript, JSX, CSS3)
+Frontend: React (JavaScript, CSS3)
 
-Hosting & Backend Forms: Netlify
+Hosting & Backend Forms: Netlify, Google Sheets and Script
 
 Version Control: Git & GitHub
 
