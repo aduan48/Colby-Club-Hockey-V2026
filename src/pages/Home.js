@@ -4,17 +4,19 @@ import About from './About'
 import Contact from './Contact'
 import Roster from './Roster'
 import Puck from '../components/FloatingPuck'
-import '../styles/Home.css'
 
 
-
+/**
+ * 
+ * @returns a hamburger like layout with all the different sections together
+ */
 function Home() {
 
 
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // If the URL is /about OR if there is a hash like #about-section
+    // If the URL is /about OR if there is a hash like #about-section then it will scroll that section into view
     if (pathname === '/about' || hash === '#about-section') {
       const element = document.getElementById('about-section');
       if (element) {
@@ -34,21 +36,21 @@ function Home() {
   }, [pathname, hash]); // Run this whenever the URL changes
 
   return (
-<div className="home">
-    <Puck />
-    
-    {/* Wrap About in a white section */}
-    <div className="white-section" id="about-section">
-      <About />
-    </div>
+    <div className="home">
+        <Puck />
+        
+        {/* Wrap About in a white section */}
+        <div className="white-section" id="about-section">
+          <About />
+        </div>
 
-    <Roster />
+        <Roster />
 
-    {/* Wrap Contact in a white section */}
-    <div className="white-section" id="contact-us">
-      <Contact />
-    </div>
-  </div>
+        {/* Wrap Contact in a white section */}
+        <div className="white-section" id="contact-us">
+          <Contact />
+        </div>
+      </div>
   )
 }
 

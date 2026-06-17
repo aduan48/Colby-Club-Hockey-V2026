@@ -1,7 +1,6 @@
 .carousel {
     width: 70%;
     overflow: hidden; /* Keeps the container clean */
-    border-radius: 12px; /* Optional: makes it look a bit more modern */
     margin: 0 auto;
 }
 
@@ -17,6 +16,6 @@
     width: 100%;
     margin-bottom: 0px;
     height: 60vh; /* This controls how much space the 3D scene takes up */
-    background: transparent; /* Or #021a4a to match your puck scene */
+    background: transparent; 
     overflow: hidden;
 }

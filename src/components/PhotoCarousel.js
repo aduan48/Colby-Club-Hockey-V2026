@@ -11,16 +11,25 @@ import carousel7 from '../assets/tino.jpg'
 import carousel8 from '../assets/tmoAura.jpg'
 import '../styles/Carousel.css'
 
+/**
+ * This creates a 3d photo
+ * @param url of the photo
+ * @param index of the photo in the array
+ * @param total the lenght of the arry
+ * @param radius the distance from center of the 3d carousel to the photo
+ * @returns a 3d photo
+ */
 function PhotoPlane({ url, index, total, radius }) {
     const texture = useLoader(THREE.TextureLoader, url)
-    const angle = (index / total) * Math.PI * 2
+    const angle = (index / total) * Math.PI * 2 //divides the circle up
     texture.colorSpace = THREE.SRGBColorSpace
     
+    //uses polar identities to get the x y positions of each of the photos
     const x = Math.cos(angle) * radius
     const z = Math.sin(angle) * radius
 
     return (
-        <mesh position={[x, 0, z]} rotation={[0, -angle + Math.PI / 2, 0]}>
+        <mesh position={[x, 0, z]} rotation={[0, -angle + Math.PI / 2, 0]}> {/* makes sure the photos are rotated outwards correctly*/}
             <planeGeometry args={[6, 4]} /> {/* Adjust width/height here */}
             <meshStandardMaterial 
                 map={texture} 
@@ -35,14 +44,28 @@ function PhotoPlane({ url, index, total, radius }) {
     )
 }
 
+/**
+ * Takes photos and makes a 3d carousel
+ * @param photos 
+ * @returns 
+ */
 function CarouselScene({ photos }) {
     const groupRef = useRef()
     const radius =8
 
+  /**
+   * This constantly rotates the carousel.
+   * * Updates the puck's Y-axis rotation on every animation frame. The rotation 
+   * speed is multiplied by the clock delta to ensure consistent, frame-rate 
+   * independent animation across different monitor refresh rates (e.g., 60Hz vs 144Hz).
+   * * @param {Object} state - The React Three Fiber state context containing clock, camera, and pointer data.
+   * @param {number} delta - The execution time elapsed since the last frame in fractions of a second.
+   */
     useFrame((state, delta) => {
         groupRef.current.rotation.y += delta * 0.15 // Adjust speed here
     })
 
+    //takes tje photos and makes a map of them
     return (
         <group ref={groupRef}>
             {photos.map((url, i) => (
@@ -52,6 +75,10 @@ function CarouselScene({ photos }) {
     )
 }
 
+/**
+ * 
+ * @returns The finished photo carousel
+ */
 function PhotoCarousel() {
 
     const [photos]=useState([carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel7, carousel8]);

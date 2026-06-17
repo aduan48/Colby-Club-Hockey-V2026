@@ -1,9 +1,16 @@
 // netlify/functions/getschedule.js
 const headers = {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*', // Allows your React app to talk to it
+    // Tells the client/browser that the response data is formatted as JSON
+    'content-type' : 'application/json',
+    
+    // Enables CORS: Allows any external domain (like your frontend) to safely fetch this data
+    'Access-Control-Allow-Origin': '*'
 };
 
+/**
+ * 
+ * @returns the JSON data on the given year with the headers and data
+ */
 exports.handler = async (event) => {
     try {
         const year = event.queryStringParameters.year;

@@ -1,15 +1,19 @@
 import '../styles/About.css';
 import Carousel from '../components/PhotoCarousel'
-//import rink from './images/siderink.jpg';
-//import huddle from './images/huddle.jpg';
 
+/**
+ * Credit to Aidan Kwok for writing the content
+ * @returns The about sections
+ */
 function About() {
   return (
     <div id="about-section">
+
       <header id="About" className='section-header'>About Us</header>
             <Carousel className = 'carousel'/>
       <div className='about'>
-        <div className="about-item">
+
+        <div className="about-item"> {/*Left Side */}
           <div>
 
             <p>
@@ -20,7 +24,8 @@ function About() {
             </p>
           </div>
         </div>
-        <div className='about-item'>
+
+        <div className='about-item'>{/*Right Side */}
 
           <p>
             Our head coach, Andrew Marshall, has achieved a 5, the highest level of coaching qualification from USA Hockey, and also leads the Maine Coast Storm as their coaching director. He brings a player-first approach, and we couldn't be luckier to have him. 

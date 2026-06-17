@@ -13,6 +13,20 @@
   scroll-padding-top:14vh;
 }
 
+.App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: fadeInPage 0.8s ease-in-out;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -44,19 +58,6 @@ body {
 
 }
 
-.App {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  animation: fadeInPage 0.8s ease-in-out;
-}
 
 /* The Container stays the same for that nice radial background */
 .loading-screen {

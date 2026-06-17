@@ -1,9 +1,4 @@
-/*Contact us section*/
-@media(max-width: 1200px){
-    .contact-us{
-        margin: 0 15% !important;
-    }
-} 
+
 .contact-us {
     margin: 0 20%;
     padding: 5% 5%;
@@ -68,3 +63,9 @@ button[type="submit"]:hover {
     color: #9BA3AF;
 
 }
+
+@media(max-width: 1200px){
+    .contact-us{
+        margin: 0 15% !important;
+    }
+} 

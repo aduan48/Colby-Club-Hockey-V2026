@@ -3,6 +3,10 @@ import '../styles/Footer.css'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import YoutubeIcon from '@mui/icons-material/YouTube'
 
+/**
+ * This is my footer function
+ * @returns A footer object with the copyright and links to our social media
+ */
 function Footer() {
   return (
     <div className='footer'>

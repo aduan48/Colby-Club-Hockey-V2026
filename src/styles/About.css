@@ -1,3 +1,33 @@
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    margin: 1vh 15% 5vh 15%; 
+}
+
+#About.section-header {
+    margin-top: 30px; /* Reduced from 50px */
+    margin-bottom: -60px; /* Ensure no extra space below the word "About" */
+}
+
+/* Allows for left right configuration*/
+.about-item{
+    display:flex;
+    margin-top: -50px;
+    flex-direction: column;
+    justify-content:start;
+    align-content:center;
+    font-size:1.1em;
+    margin-right:3%;
+    margin-left:3%;
+}
+
+p{
+    line-height:2;
+}
+ 
+
 @media (max-width: 1200px) {
     .about {
       flex-direction: column; /* Stack the items on smaller screens */
@@ -13,36 +43,3 @@
         width:50%;
     }
 }
-
-
-
-
-/* Change this section in About.css */
-#About.section-header {
-    margin-top: 30px; /* Reduced from 50px */
-    margin-bottom: -60px; /* Ensure no extra space below the word "About" */
-}
-
-.about {
-    display: flex;
-    justify-content: center;
-    align-content: start;
-    /* Reduced top margin from 5vh to 1vh or 10px */
-    margin: 1vh 15% 5vh 15%; 
-}
-
-.about-item{
-    display:flex;
-    margin-top: -50px;
-    flex-direction: column;
-    justify-content:start;
-    align-content:center;
-    font-size:1.1em;
-    /* color:var(--darker-grey); */
-    margin-right:3%;
-    margin-left:3%;
-}
-p{
-    line-height:2;
-}
- 

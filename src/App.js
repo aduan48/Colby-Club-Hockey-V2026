@@ -1,48 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Schedule from './pages/Schedule'
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import muleLogo from './assets/frontpuck1.png'
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Schedule from './pages/Schedule';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import muleLogo from './assets/frontpuck1.png';
 
+/**
+ * 
+ * @returns my website
+ */
 function App() {
+  
+  const [loading, setLoading] = useState(true);//when first loading I want it to show teh loading screen
 
-
-  const [loading, setLoading] = useState(true);
-
+  /**
+   * Sets and makes the loading screen when first launches
+   */
   useEffect(() => {
-    // 1. Define the timer
+    // Keep the loading screen active for 2.5 seconds for animation purposes
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2500);
 
-    // 2. Optional: If you want to ensure it ONLY disappears 
-    // after BOTH the timer is done AND the window is loaded:
-    const handleLoad = () => {
-      // You could add logic here if you wanted to wait for heavy assets
-    };
-
-    if (document.readyState === 'complete') {
-      // Page is already ready, the timeout above will handle the exit
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    // 3. Cleanup (Very important to prevent memory leaks)
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('load', handleLoad);
-    };
+    return () => clearTimeout(timer);
   }, []);
-
 
   if (loading) {
     return (
       <div className="loading-screen">
         <div className="loader"></div>
-        <img src = {muleLogo} className="mule-pulse-logo" alt= "mule logo" />
+        <img src={muleLogo} className="mule-pulse-logo" alt="mule logo" />
       </div>
     );
   }
@@ -52,11 +41,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path = "/" element={<Home />} />
-          <Route path = "/home" element={<Home />} />
-          <Route path = "/contact" element={<Home />} />
-          <Route path = "/about" element ={<Home />} />
-          <Route path = "/schedule" element = {<Schedule />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/contact" element={<Home />} />
+          <Route path="/about" element={<Home />} />
+          <Route path="/schedule" element={<Schedule />} />
         </Routes>
         <Footer />
       </Router>

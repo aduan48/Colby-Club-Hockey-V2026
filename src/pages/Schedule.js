@@ -23,11 +23,19 @@ import mines from '../assets/opponent-logo/coloradoschoolofmines.png'
 import nau from '../assets/opponent-logo/nau.png'
 import acha2024 from '../assets/opponent-logo/acha2024.png';
 
+/**
+ * 
+ * @returns The schedule page
+ */
 function Schedule() {
-    //add wins, losses, etc once database table is set up
-    const [schedule, setSchedule] = useState([]);
-    const [scheduleYear, setScheduleYear] = useState("2025")
-    const [scroll, setScroll] = useState(0);
+
+    const [schedule, setSchedule] = useState([]);//sets specific schedule data
+
+    const [scheduleYear, setScheduleYear] = useState("2025"); //default year is most current
+
+    /**
+     * By taking the first character it will calcuate the num of wins, losses, ties, and game player
+     */
     const stats = schedule.reduce((acc, game) =>{
         const result = (game.score && typeof game.score === 'string') ? game.score.trim().charAt(0).toUpperCase() : null;
         if (result === 'W') acc.wins++;
@@ -38,10 +46,12 @@ function Schedule() {
         return acc;
     }, { wins: 0, losses: 0, ties: 0, gp: 0 })
 
+    //calucates the win percentage using the stats game played
     const winPercentage = stats.gp > 0 
         ? ((stats.wins / stats.gp) * 100).toFixed(1) 
         : 0;
 
+    //an aray of all of teh images of the opponents
     const image = {
         'bates':bates,
         'cmcc': cmcc,
@@ -62,12 +72,10 @@ function Schedule() {
         'mines': mines,
         'nau': nau
     };
-    useEffect(() => {
-        const handleScroll = () => setScroll(window.scrollY);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
+    /**
+     * this fetches the schedule data when ever teh year get changed
+     */
     useEffect(() => {
         async function fetchData() {
             try {
@@ -87,12 +95,22 @@ function Schedule() {
         fetchData();
     }, [scheduleYear]);
 
-
+    /**
+     * This creates a row with the information of each game mapped out
+     * @param logo 
+     * @param homeAway 
+     * @param opponent 
+     * @param date 
+     * @param score 
+     * @returns 
+     */
     function game(logo, homeAway, opponent, date, score) {
         return (
             <tr className='row'>
                 <td><img className='schedule-logo' src={logo} alt={`${opponent} Logo`}/></td>
                 <td className='center'>
+
+                {/* renders the national, necha or home and away depending on the data*/}
                 {homeAway === 'nationals' ? (
                     <img className='schedule-logo' src={acha2024} alt = "" />
                 ) : homeAway === 'necha' ? (
@@ -100,9 +118,11 @@ function Schedule() {
                 ) : (
                     <span className={homeAway}>{homeAway}</span>
                 )}
+
                 </td>
                 <td>{opponent}</td>
                 <td>{date}</td>
+                {/* Changes the color of the shcedule based on css logic*/}
                 <td className={score.charAt(0) === 'W' ? 'win' : score.charAt(0) === 'L' ? 'loss' : ''}>{score}</td>
             </tr>
         )
@@ -112,7 +132,7 @@ function Schedule() {
         <>
 
             <div className='background-container'>
-                <img src={frontRink} className={scroll < 3500 ? (scroll > 1600 ? 'image background active' : 'image background') : 'image background'} alt = ""/>
+                <img src={frontRink} className='image background' alt = ""/>
             </div>
             <header id='Schedule' className='section-header'>Schedule</header>
 
