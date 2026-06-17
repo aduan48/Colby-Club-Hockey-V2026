@@ -23,29 +23,29 @@ Follow these instructions to set up a local copy of the project for development 
 
 Ensure you have Node.js and npm installed on your machine. You can verify your installation by running:
 
-```bash
+bash
 node -v
-npm -v
+npm -v 
 
 ### Installation
 
 1. Clone the repository:
-```bash
-   git clone [https://github.com/aduan48/East-Coast-Dragons.git](https://github.com/aduan48/East-Coast-Dragons.git)
+bash
+git clone [https://github.com/aduan48/East-Coast-Dragons.git](https://github.com/aduan48/East-Coast-Dragons.git)
 
 2. Navigate into the project directory:
-```bash
-   cd East-Coast-Dragons
+bash
+cd East-Coast-Dragons
 
 3. Install the project dependencies:
-```bash
-   npm install
+bash
+npm install
 
 ## Running Locally
 
 To launch the local development server:
-```bash
-   ntl dev
+bash
+ntl dev
 
 
 ## Deployment
