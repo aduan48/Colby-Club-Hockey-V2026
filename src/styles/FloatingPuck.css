@@ -7,6 +7,22 @@
   overflow: hidden;
 }
 
+/* Sits above the canvas but below the title/button (z-index 10/20) so it hides the
+   WebGL init hitch without hiding the hero text. Fades out once the timer clears it. */
+.puck-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background-color: var(--darker-primary);
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.puck-cover-hidden {
+  opacity: 0;
+}
+
 .puck-overlay {
   position: absolute;
   top: 50%;
@@ -80,7 +96,7 @@
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   margin-bottom: 45px;
   pointer-events: auto; /* Ensures the button is clickable */
 }
