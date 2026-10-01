@@ -3,6 +3,7 @@ import '../styles/Table.css'
 import { useState, useEffect } from 'react';
 import frontRink from '../assets/frontrink.jpg';
 import bates from '../assets/opponent-logo/bates.png';
+import tufts from '../assets/opponent-logo/tufts.png';
 import cmcc from '../assets/opponent-logo/cmcc.png';
 import dartmouth from '../assets/opponent-logo/dartmouth.png';
 import sjc from '../assets/opponent-logo/sjc.png';
@@ -31,7 +32,7 @@ function Schedule() {
 
     const [schedule, setSchedule] = useState([]);//sets specific schedule data
 
-    const [scheduleYear, setScheduleYear] = useState("2025"); //default year is most current
+    const [scheduleYear, setScheduleYear] = useState("2026"); //default year is most current
 
     /**
      * By taking the first character it will calcuate the num of wins, losses, ties, and game player
@@ -54,6 +55,7 @@ function Schedule() {
     //an aray of all of teh images of the opponents
     const image = {
         'bates':bates,
+        'tufts': tufts,
         'cmcc': cmcc,
         'dartmouth': dartmouth,
         'sjc': sjc,
@@ -129,20 +131,13 @@ function Schedule() {
     }
 
     return (
-        <>
+        <div className='schedule'>
 
             <div className='background-container'>
                 <img src={frontRink} className='image background' alt = ""/>
             </div>
             <header id='Schedule' className='section-header'>Schedule</header>
 
-
-
-            <select className="dropdown" onChange={(e) => setScheduleYear(e.target.value)} value={scheduleYear}>
-                <option value="2025">2025 - 2026</option>
-                <option value="2024">2024 - 2025</option>
-                <option value="2023">2023 - 2024</option>
-            </select>
 
             <div className="stats-bar">
                 <div className="stat-item">
@@ -158,6 +153,13 @@ function Schedule() {
                     <span className="stat-value">{winPercentage}%</span>
                 </div>
             </div>
+
+                        <select className="dropdown" onChange={(e) => setScheduleYear(e.target.value)} value={scheduleYear}>
+                <option value="2026">2026 - 2027</option>
+                <option value="2025">2025 - 2026</option>
+                <option value="2024">2024 - 2025</option>
+                <option value="2023">2023 - 2024</option>
+            </select>
 
             <div className='schedule-roster'>
                 <table>
@@ -178,7 +180,7 @@ function Schedule() {
                     </tbody>
                 </table>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -3,6 +3,15 @@
     text-align:center;
 }
 
+.schedule{
+    width:100%;
+    align-items: center;
+}
+
+.dropdown{
+
+}
+
 .background-container {
     position: fixed; /* This keeps it glued to the screen */
     top: 0;
@@ -33,7 +42,6 @@
     width: 68%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -5px;
     border-radius: 3px;
 
 }
@@ -66,7 +74,7 @@
 .schedule-roster {
     overflow-x: scroll;
     width: 70%;
-    margin: 5vh 15%;
+    margin: 2vh 15%;
           
 }
 
@@ -98,3 +106,25 @@
     max-width: 4vh;
     max-height: 4vh;
 }
+
+@media(max-width: 1000px){
+    .schedule-roster{
+        margin: 1vh 0%;
+        width: 100%;
+    }
+    .schedule{
+        overflow: hidden;
+    }
+
+    .dropdown{
+        margin-left: 0;
+    }
+
+    .stats-bar{
+        margin: 10px 0%;
+        width: 100%;
+        max-width: 1000px;
+        padding: 15px;
+        gap: 10px;
+    }
+} 

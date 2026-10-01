@@ -8,7 +8,7 @@ import {useState, useEffect } from 'react';
  */
 function Roster() {
     const [roster, setRoster] = useState();
-    const [rosterYear, setRosterYear] = useState("2025")
+    const [rosterYear, setRosterYear] = useState("2026")
 
     /**
      * When ever the roster year get changed with teh drop down, it will fetch the correct roster using the getroster function
@@ -72,6 +72,7 @@ function Roster() {
             <header className='section-header' id='Roster'>Roster</header>
 
             <select className="dropdown" onChange={handleChange} value = {rosterYear}>
+                <option value= "2026">2026 - 2027</option>
                 <option value= "2025">2025 - 2026</option>
                 <option value= "2024">2024 - 2025</option>
                 <option value= "2023">2023 - 2024</option>

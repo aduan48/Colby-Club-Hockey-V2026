@@ -1,16 +1,136 @@
 [
-  {
-    "logofile": "une",
-    "location": "vs",
-    "opponent": "University of New England",
-    "date": "Oct 3, 5 PM",
-    "score": "W 11-3"
-  },
+
   {
     "logofile": "um",
     "location": "at",
     "opponent": "University of Maine",
-    "date": "Oct 3, 5 PM",
-    "score": "W 5-2"
-  }
+    "date": "Oct 7th, 8:15 PM",
+    "score": ""
+  },
+  {
+    "logofile": "sjc",
+    "location": "at",
+    "opponent": "St. Joseph College",
+    "date": "Oct 17th, 9 PM",
+    "score": ""
+  },
+  {
+    "logofile": "dartmouth",
+    "location": "vs",
+    "opponent": "Dartmouth College",
+    "date": "Oct 18th, 3 PM",
+    "score": ""
+  },
+  {
+    "logofile": "unh",
+    "location": "at",
+    "opponent": "University of New Hampshire",
+    "date": "Oct 25th, 12 PM",
+    "score": ""
+  },
+  {
+    "logofile": "une",
+    "location": "vs",
+    "opponent": "University of New England",
+    "date": "Oct 31st, 7 PM",
+    "score": ""
+  },
+  {
+    "logofile": "bates",
+    "location": "vs",
+    "opponent": "Bates College",
+    "date": "Nov 1st, 2 PM",
+    "score": ""
+  },
+  {
+    "logofile": "tufts",
+    "location": "at",
+    "opponent": "Tufts University",
+    "date": "Nov 7th, 6:30 PM",
+    "score": ""
+  },
+  {
+    "logofile": "thomas",
+    "location": "vs",
+    "opponent": "Thomas College",
+    "date": "Nov 12th, TBD",
+    "score": ""
+  },
+  {
+    "logofile": "umass",
+    "location": "vs",
+    "opponent": "University of Massachusetts",
+    "date": "Nov 15th, 3 PM",
+    "score": ""
+  },
+  {
+    "logofile": "cmcc",
+    "location": "at",
+    "opponent": "Central Maine Community College",
+    "date": "Dec 3rd, 7:30 PM",
+    "score": ""
+  },
+  {
+    "logofile": "bates",
+    "location": "vs",
+    "opponent": "Bates College",
+    "date": "Dec 6th, 3 PM",
+    "score": ""
+  },
+  {
+    "logofile": "une",
+    "location": "at",
+    "opponent": "University of New England",
+    "date": "Dec 12th, 7 PM",
+    "score": ""
+  },
+  {
+    "logofile": "sjc",
+    "location": "vs",
+    "opponent": "St. Joseph College",
+    "date": "Jan 17th, 3 PM",
+    "score": ""
+  },
+  {
+    "logofile": "unh",
+    "location": "vs",
+    "opponent": "University of New Hampshire",
+    "date": "Jan 24th, 3 PM",
+    "score": ""
+  },
+  {
+    "logofile": "cmcc",
+    "location": "at",
+    "opponent": "Central Maine Community College",
+    "date": "Jan 27th, 7 PM",
+    "score": ""
+  },
+  {
+    "logofile": "dartmouth",
+    "location": "at",
+    "opponent": "Dartmouth College",
+    "date": "Feb 6th, 8:30 PM",
+    "score": ""
+  },
+  {
+    "logofile": "thomas",
+    "location": "at",
+    "opponent": "Thomas College",
+    "date": "Feb 11th, 7:30 PM",
+    "score": ""
+  },
+  {
+    "logofile": "cmcc",
+    "location": "vs",
+    "opponent": "Central Maine Community College",
+    "date": "Feb 14th, 3 PM",
+    "score": ""
+  },
+  {
+    "logofile": "thomas",
+    "location": "vs",
+    "opponent": "Thomas College",
+    "date": "Feb 18th, TBD",
+    "score": ""
+    }
 ]

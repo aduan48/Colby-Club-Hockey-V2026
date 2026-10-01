@@ -6,27 +6,39 @@ const headers = {
     'Access-Control-Allow-Origin': '*'
 };
 
+const DEFAULT_YEAR = '2026'; // used when no ?year= is given
+
+
 /**
  * 
  * @returns the JSON data on the given year with the headers and data
  */
 
 exports.handler = async (event) => {
-    if (event.queryStringParameters.year==2024){
-        data = require('./roster2024.json');
+    const year = event.queryStringParameters?.year || DEFAULT_YEAR;
+
+    //only allow 4 digits
+    if (!/^\d{4}$/.test(year)) {
+        return {
+        statusCode: 400,
+        headers,
+        body: JSON.stringify({ error: 'Year must be a 4-digit number' }),
+        };
     }
-    else if (event.queryStringParameters.year==2023){
-           data = require('./roster2023.json');
-    }
-    else if(event.queryStringParameters.year==2022){
-        data = require('./roster2022.json');
-    }
-    else if(event.queryStringParameters.year==2025){
-        data = require('./roster2025.json');
-    }
-    return {
-        body: JSON.stringify(data),
-        statusCode: 200,
-        headers: headers
+
+    try {
+        const data = require(`./roster${year}.json`)
+
+        return{
+            statusCode: 200,
+            headers,
+            body: JSON.stringify(data)
+        }
+    } catch (error) {
+        return{
+            statusCode: 404,
+            headers,
+            body: JSON.stringify({ error: `No schedule found for ${year}` }),
+        }
     }
 }
