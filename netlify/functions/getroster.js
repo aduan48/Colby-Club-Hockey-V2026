@@ -29,16 +29,35 @@ exports.handler = async (event) => {
     try {
         const data = require(`./roster${year}.json`)
 
+        const sorted = []
+        
+        // blank or invalid number → Infinity so it sorts last
+        const sortNumber = (player) => {
+            const n = Number(player.number);
+            return player.number === "" || Number.isNaN(n) ? Infinity : n;
+        };
+
+        data.forEach((player) => {
+            const playerNumber = sortNumber(player);
+
+            let i = 0;
+            while (i < sorted.length && playerNumber > sortNumber(sorted[i])) {
+                i++;
+            }
+
+            sorted.splice(i, 0, player);
+        });
+
         return{
             statusCode: 200,
             headers,
-            body: JSON.stringify(data)
+            body: JSON.stringify(sorted)
         }
     } catch (error) {
         return{
             statusCode: 404,
             headers,
-            body: JSON.stringify({ error: `No schedule found for ${year}` }),
+            body: JSON.stringify({ error: `No roster found for ${year}` }),
         }
     }
 }
