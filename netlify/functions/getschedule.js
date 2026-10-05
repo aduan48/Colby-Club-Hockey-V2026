@@ -1,4 +1,7 @@
 // netlify/functions/getschedule.js
+const { getStore, connectLambda } = require('@netlify/blobs');
+
+
 const headers = {
   // Tells the client/browser that the response data is formatted as JSON
   'content-type': 'application/json',
@@ -25,7 +28,15 @@ exports.handler = async (event) => {
   }
 
   try {
-    const data = require(`./schedule${year}.json`);
+    connectLambda(event);
+    const store = getStore('team-data')
+    const data = await store.get(`schedule${year}`, { type: 'json' });
+
+
+    if (data === null) {
+      return { statusCode: 404, headers, body: JSON.stringify({ error: `No schedule found for ${year}` }) };
+    }
+
 
     return {
       statusCode: 200,
@@ -34,8 +45,9 @@ exports.handler = async (event) => {
     };
   } catch (error) {
     // No file for that year
+    console.error(error);
     return {
-      statusCode: 404,
+      statusCode: 500,
       headers,
       body: JSON.stringify({ error: `No schedule found for ${year}` }),
     };

@@ -1,3 +1,6 @@
+// netlify/functions/getroster.js
+const { getStore, connectLambda } = require('@netlify/blobs');
+
 const headers = {
     // Tells the client/browser that the response data is formatted as JSON
     'content-type' : 'application/json',
@@ -27,7 +30,13 @@ exports.handler = async (event) => {
     }
 
     try {
-        const data = require(`./roster${year}.json`)
+        connectLambda(event);
+        const store = getStore('team-data')
+        const data = await store.get(`./roster${year}`, {type : 'json'});
+
+         if (!Array.isArray(data)) {
+            return { statusCode: 404, headers, body: JSON.stringify({ error: `No roster found for ${year}` }) };
+        }
 
         const sorted = []
         
@@ -37,6 +46,7 @@ exports.handler = async (event) => {
             return player.number === "" || Number.isNaN(n) ? Infinity : n;
         };
 
+        //sorts each one
         data.forEach((player) => {
             const playerNumber = sortNumber(player);
 
@@ -55,7 +65,7 @@ exports.handler = async (event) => {
         }
     } catch (error) {
         return{
-            statusCode: 404,
+            statusCode: 500,
             headers,
             body: JSON.stringify({ error: `No roster found for ${year}` }),
         }
