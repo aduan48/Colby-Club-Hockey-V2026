@@ -23,29 +23,45 @@ Follow these instructions to set up a local copy of the project for development 
 
 Ensure you have Node.js and npm installed on your machine. You can verify your installation by running:
 
-bash
+```bash
 node -v
-npm -v 
+npm -v
+```
+
+You'll also need the Netlify CLI:
+
+```bash
+npm install -g netlify-cli
+```
+
 
 ### Installation
 
 1. Clone the repository:
-bash
-git clone [https://github.com/aduan48/Colby-Club-Hockey-V2026](https://github.com/aduan48/Colby-Club-Hockey-V2026)
+
+```bash
+   git clone https://github.com/aduan48/Colby-Club-Hockey-V2026.git
+```
 
 2. Navigate into the project directory:
-bash
-cd Colby-Club-Hockey-V2026
+
+```bash
+   cd Colby-Club-Hockey-V2026
+```
 
 3. Install the project dependencies:
-bash
-npm install
+
+```bash
+   npm install
+```
 
 ## Running Locally
 
 To launch the local development server:
-bash
+
+```bash
 ntl dev
+```
 
 
 ## Deployment
@@ -58,20 +74,23 @@ This project uses Netlify Blobs and Netlify Functions to get JSON team data.
 
 ## TOO ADD AND EDIT DATA
 
-1. Upload the data by running 
-bash
-./scripts/upload-data.sh
+1. Edit or add JSON files in `data/`. Keep the naming pattern (`roster2027.json`, `schedule2027.json`) so the functions can find them.
 
+2. Upload the data. This is what makes the changes live:
 
-2. The update will then ask if you would like to overwrite the current JSON's. Allow them to overwrite the data you have edited.
+```bash
+   ./scripts/upload-data.sh
+```
 
-3. Then commit and push, which saves the history and doesn't build
-bash
-git add data/
-git commit -m "your message"
-git push
+3. When asked whether to overwrite the existing data, confirm for each file you edited.
 
+4. Commit and push to save the history. This does not trigger a build:
 
+```bash
+   git add data/
+   git commit -m "your message"
+   git push
+```
 
 ### Netlify Forms Configuration
 
