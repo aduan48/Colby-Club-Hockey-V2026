@@ -31,11 +31,11 @@ npm -v
 
 1. Clone the repository:
 bash
-git clone [https://github.com/aduan48/East-Coast-Dragons.git](https://github.com/aduan48/East-Coast-Dragons.git)
+git clone [https://github.com/aduan48/Colby-Club-Hockey-V2026](https://github.com/aduan48/Colby-Club-Hockey-V2026)
 
 2. Navigate into the project directory:
 bash
-cd East-Coast-Dragons
+cd Colby-Club-Hockey-V2026
 
 3. Install the project dependencies:
 bash
