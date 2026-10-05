@@ -3,10 +3,10 @@
         "name": "Chase Hennessey",
         "number": "1",
         "position": "G",
-        "height": "",
-        "weight": "",
-        "hand": "",
-        "town": ""
+        "height": "6-2",
+        "weight": "185",
+        "hand": "L",
+        "town": "Lake Forest, IL"
     },
     {
       "name": "Riley Van Son",
@@ -40,7 +40,7 @@
       "number": "5",
       "position": "D",
       "height": "6-4",
-      "weight": "200",
+      "weight": "195",
       "hand": "L",
       "town": "Gloucester, MA"
     },
@@ -51,7 +51,7 @@
         "height": "6-1",
         "weight": "185",
         "hand": "R",
-        "town": "St. Augustine, FL"
+        "town": "Danderyd, SWE"
     },
     {
         "name": "Eli Weinberger",
@@ -93,10 +93,10 @@
       "name": "Naoya Miyata",
       "number": "11",
       "position": "F",
-      "height": "5-8",
-      "weight": "185",
+      "height": "5-9",
+      "weight": "165",
       "hand": "L",
-      "town": "Cypress, CA"
+      "town": "Tokyo, JAP"
     },
     {
       "name": "Bear Brooks",
@@ -105,7 +105,7 @@
       "height": "5-10",
       "weight": "150",
       "hand": "R",
-      "town": "Newbury, MA"
+      "town": "Santa Monica, CA"
     },
     {
       "name": "Jace Gangadharan",
@@ -120,17 +120,17 @@
       "name": "Walker Boardman",
       "number": "14",
       "position": "D",
-      "height": "",
-      "weight": "",
-      "hand": "",
-      "town": ""
+      "height": "5-10",
+      "weight": "160",
+      "hand": "L",
+      "town": "Greenwich, CT"
     },
     {
       "name": "Alex Duan",
       "number": "15",
       "position": "D",
       "height": "6-0",
-      "weight": "185",
+      "weight": "200",
       "hand": "R",
       "town": "Needham, MA"
     },
@@ -183,10 +183,10 @@
       "name": "JP McGill",
       "number": "23",
       "position": "D",
-      "height": "",
-      "weight": "",
-      "hand": "",
-      "town": ""
+      "height": "5-10",
+      "weight": "170",
+      "hand": "L",
+      "town": "Philadelphia, PA"
     },
     {
       "name": "Makili Matty",
@@ -210,19 +210,19 @@
         "name": "Peter Wilkoff",
         "number": "26",
         "position": "D",
-        "height": "",
-        "weight": "",
-        "hand": "",
-        "town": ""
+        "height": "6-1",
+        "weight": "160",
+        "hand": "R",
+        "town": "Brunswick, ME"
     },
     {
       "name": "Trey Hanson",
       "number": "24",
       "position": "F",
-      "height": "",
-      "weight": "",
-      "hand": "",
-      "town": ""
+      "height": "6-1",
+      "weight": "190",
+      "hand": "R",
+      "town": "Topsfield, MA"
     },
     {
       "name": "Brendan Bullock",
@@ -237,10 +237,10 @@
       "name": "Will Freda",
       "number": "22",
       "position": "F",
-      "height": "",
-      "weight": "",
-      "hand": "",
-      "town": ""
+      "height": "5-10",
+      "weight": "165",
+      "hand": "R",
+      "town": "Lexington, MA"
     },
     {
       "name": "Joe Faiman",
