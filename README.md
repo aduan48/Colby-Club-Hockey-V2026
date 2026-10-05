@@ -52,6 +52,23 @@ ntl dev
 
 This project is configured for continuous deployment via Netlify, automatically building and deploying whenever changes are pushed to the `main` branch.
 
+### Backend
+
+This project uses Netlify Blobs and Netlify Functions to get JSON team data. 
+
+## TOO ADD AND EDIT DATA
+
+1. Upload the data by running 
+bash
+./scripts/upload-data.sh
+
+2. Then commit and push, which saves the history and doesn't build
+bash
+git add data/
+git commit -m "Update 2026 roster"
+git push
+
+
 ### Netlify Forms Configuration
 
 The contact form utilizes a shadow HTML form located in `public/index.html`. This structure allows Netlify's build bots to detect and register the submission endpoint automatically, enabling serverless form handling without an external API.
