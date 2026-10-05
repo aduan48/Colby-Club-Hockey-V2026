@@ -62,11 +62,15 @@ This project uses Netlify Blobs and Netlify Functions to get JSON team data.
 bash
 ./scripts/upload-data.sh
 
-2. Then commit and push, which saves the history and doesn't build
+
+2. The update will then ask if you would like to overwrite the current JSON's. Allow them to overwrite the data you have edited.
+
+3. Then commit and push, which saves the history and doesn't build
 bash
 git add data/
-git commit -m "Update 2026 roster"
+git commit -m "your message"
 git push
+
 
 
 ### Netlify Forms Configuration
