@@ -68,11 +68,11 @@ ntl dev
 
 This project is configured for continuous deployment via Netlify, automatically building and deploying whenever changes are pushed to the `main` branch.
 
-### Backend
+## Backend
 
 This project uses Netlify Blobs and Netlify Functions to get JSON team data. 
 
-## TOO ADD AND EDIT DATA
+### TOO ADD AND EDIT DATA
 
 1. Edit or add JSON files in `data/`. Keep the naming pattern (`roster2027.json`, `schedule2027.json`) so the functions can find them.
 
