@@ -73,7 +73,7 @@ const FloatingPuck = () => {
 
             {/* Bottom Button Area */}
             <div className="puck-overlay-bottom" ref={buttonRef}>
-                <a href="https://m.youtube.com/channel/UCOh41arhJiIw_XcnH0Oz4Dg/streams" className="watchLiveLink">
+                <a href="https://www.youtube.com/@colbyclubhockey/streams" className="watchLiveLink">
                      <button className="watch-live-btn">WATCH LIVE</button>
                 </a>
             </div>

@@ -22,7 +22,7 @@ function About() {
             <p>
               Our student leadership team runs all club operations, including game scheduling, budget allocation/distribution, and team events. 
             </p>
-          </div>
+          </div> 
         </div>
 
         <div className='about-item'>{/*Right Side */}

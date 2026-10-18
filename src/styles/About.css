@@ -28,9 +28,13 @@ p{
 }
  
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .about {
       flex-direction: column; /* Stack the items on smaller screens */
+    }
+    .about-item {
+      width: 100%; /* Make each item take full width */
+      margin: 10px 0; /* Add some vertical spacing between items */
     }
   }
 @media (min-width:1200px){
