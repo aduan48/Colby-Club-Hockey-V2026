@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect, useLayoutEffect, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
+import {Link } from 'react-router-dom';
 import { useGLTF, Stage, PresentationControls } from '@react-three/drei';
 import gsap from 'gsap';
 import puckUrl from './finalPuck2-optimized.glb';
@@ -76,6 +77,10 @@ const FloatingPuck = () => {
                 <a href="https://www.youtube.com/@colbyclubhockey/streams" className="watchLiveLink">
                      <button className="watch-live-btn">WATCH LIVE</button>
                 </a>
+
+                <Link to = '/schedule' className="watchLiveLink">
+                     <button className="schedule-btn">SCHEDULE</button>
+                </Link>
             </div>
 
         {/* Rotating Puck Scene Background */}

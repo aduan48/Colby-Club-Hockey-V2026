@@ -99,7 +99,28 @@
   transition: all 0.2s ease;
   margin-bottom: 45px;
   pointer-events: auto; /* Ensures the button is clickable */
+    margin-right: 5px;
 }
+
+.schedule-btn {
+  background-color: var(--hover-primary); /* Or #002855 for solid */
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 45px;
+  pointer-events: auto; /* Ensures the button is clickable */
+  margin-left: 5px;
+}
+
+.schedule-btn:hover {
+  background-color: var(--darker-primary); /* Inverts colors on hover */
+}
+
 
 .watch-live-btn:hover {
   background-color: white;
