@@ -79,7 +79,9 @@ This project uses Netlify Blobs and Netlify Functions to get JSON team data.
 2. Upload the data. This is what makes the changes live:
 
 ```bash
-   ./scripts/upload-data.sh
+   ./scripts/upload-data.sh            # uploads every file in data/
+   ./scripts/upload-data.sh roster2026     # uploads only data/roster.json
+   ./scripts/upload-data.sh data/roster2026.json   # also works, so tab-completion is fine
 ```
 
 3. When asked whether to overwrite the existing data, confirm for each file you edited.
