@@ -1,7 +1,7 @@
 [build]
   command = "yarn build"
   publish = "build"
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':!data/' ':!README.md'"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':!data/' ':!README.md' ':!scripts/'"
 
 [functions]
   directory = "netlify/functions"
