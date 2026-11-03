@@ -24,7 +24,7 @@ The 3D version was causing high bandwidth usage on Netlify.
 
 ## What replaced it
 
-The puck was animated in Blender as a seamless 4-second loop (120 frames at
+The puck was animated in Blender `animation.blend` as a seamless 4-second loop (120 frames at
 30 fps), rendered as transparent PNG frames, and encoded with ffmpeg into a
 small looping WebM video. The new `Hero` component plays it with
 `<video autoPlay muted loop playsInline>`.
