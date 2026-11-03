@@ -5,45 +5,62 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Schedule from './pages/Schedule';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useProgress } from '@react-three/drei';
 import muleLogo from './assets/frontpuck1.png';
+import puckWebm from './assets/puck.webm';
 
-// How long to keep the loading screen up at minimum, so it doesn't just flash
-// on screen for a frame when the puck loads instantly (e.g. from cache).
-const MIN_LOADING_MS = 800;
-// Safety cap: if something goes wrong with the asset load (slow network,
-// fetch error) don't leave the user stuck on the loading screen forever.
-const MAX_LOADING_MS = 12000;
+const MIN_LOADING_MS = 800;   // don't flash the loader for a split second
+const MAX_LOADING_MS = 8000;  // never trap someone on a slow connection
 
-/**
- *
- * @returns my website
- */
 function App() {
-
-  // useProgress reads from three's global LoadingManager, which every
-  // useGLTF()/useTexture() call in the app reports to. FloatingPuck.js calls
-  // useGLTF.preload() at module scope, so that fetch is already in flight by
-  // the time this component mounts, and `progress` reflects its real state
-  // instead of a fixed, made-up delay.
-  const { progress } = useProgress();
-  const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [videoReady, setVideoReady] = useState(false);
   const [minTimeElapsed, setMinTimeElapsed] = useState(false);
+  const [loading, setLoading] = useState(true);
 
+  // Download the hero video and report real progress.
+  // The browser caches it, so <Hero>'s <video> plays instantly afterwards.
   useEffect(() => {
+    let cancelled = false;
+
+    (async () => {
+      try {
+        const res = await fetch(puckWebm);
+        const total = Number(res.headers.get('Content-Length')) || 0;
+
+        if (!res.body || !total) {
+          await res.blob();               // can't measure, just wait for it
+        } else {
+          const reader = res.body.getReader();
+          let received = 0;
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            received += value.length;
+            if (!cancelled) setProgress((received / total) * 100);
+          }
+        }
+      } catch (e) {
+        // network error: don't block the site
+      }
+      if (!cancelled) {
+        setProgress(100);
+        setVideoReady(true);
+      }
+    })();
+
     const minTimer = setTimeout(() => setMinTimeElapsed(true), MIN_LOADING_MS);
     const maxTimer = setTimeout(() => setLoading(false), MAX_LOADING_MS);
+
     return () => {
+      cancelled = true;
       clearTimeout(minTimer);
       clearTimeout(maxTimer);
     };
   }, []);
 
   useEffect(() => {
-    if (progress >= 100 && minTimeElapsed) {
-      setLoading(false);
-    }
-  }, [progress, minTimeElapsed]);
+    if (videoReady && minTimeElapsed) setLoading(false);
+  }, [videoReady, minTimeElapsed]);
 
   if (loading) {
     return (
@@ -56,7 +73,7 @@ function App() {
   }
 
   return (
-    <div className="App"> 
+    <div className="App">
       <Router>
         <Navbar />
         <Routes>

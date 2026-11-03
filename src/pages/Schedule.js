@@ -1,7 +1,7 @@
 import '../styles/Schedule.css'
 import '../styles/Table.css'
 import { useState, useEffect } from 'react';
-import frontRink from '../assets/frontrink.jpg';
+import frontRink from '../assets/frontrink.webp';
 import bates from '../assets/opponent-logo/bates.png';
 import tufts from '../assets/opponent-logo/tufts.png';
 import cmcc from '../assets/opponent-logo/cmcc.png';

@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import {Link } from 'react-router-dom';
 import { useGLTF, Stage, PresentationControls } from '@react-three/drei';
 import gsap from 'gsap';
-import puckUrl from './finalPuck2-optimized.glb';
+import puckUrl from './finalPuck2-small.glb';
 import '../styles/FloatingPuck.css';
 
 // Kicks off the glb fetch as soon as this module is evaluated (i.e. as soon as the

@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import About from './About'
 import Contact from './Contact'
 import Roster from './Roster'
-import Puck from '../components/FloatingPuck'
+import Puck from '../components/Hero'
 
 
 /**

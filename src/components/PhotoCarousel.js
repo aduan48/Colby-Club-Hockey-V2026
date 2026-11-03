@@ -1,14 +1,14 @@
 import React, { useRef, Suspense, useState} from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
-import carousel1 from '../assets/cooper.jpg'
-import carousel2 from '../assets/ewan.jpg'
-import carousel3 from '../assets/holmgren.jpg'
-import carousel4 from '../assets/kwok.jpg'
-import carousel5 from '../assets/roachCelly.jpg'
-import carousel6 from '../assets/stone.jpg'
-import carousel7 from '../assets/tino.jpg'
-import carousel8 from '../assets/tmoAura.jpg'
+import carousel1 from '../assets/cooper.webp'
+import carousel2 from '../assets/ewan.webp'
+import carousel3 from '../assets/holmgren.webp'
+import carousel4 from '../assets/kwok.webp'
+import carousel5 from '../assets/roachCelly.webp'
+import carousel6 from '../assets/stone.webp'
+import carousel7 from '../assets/tino.webp'
+import carousel8 from '../assets/tmoAura.webp'
 import '../styles/Carousel.css'
 
 /**
