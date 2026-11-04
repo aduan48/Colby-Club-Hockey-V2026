@@ -6,7 +6,14 @@ These files are the old homepage hero, which rendered an interactive, spinning
 
 ## Why it was replaced
 
-The 3D version was causing high bandwidth usage on Netlify.
+The 3D version was causing high bandwidth usage on Netlify. Around 10mb per visit. The bandwidth was also the
+bulk of the credit usage.
+
+![Bandwidth](./graphs/bandwidth.png)
+
+![web-requests](./graphs/web-requests.png)
+
+![credit-usage](./graphs/credit-usage.png)
 
 - **The model was too heavy.** `finalPuck2-optimized.glb` was ~6.8 MB. The mesh
   alone had ~196K triangles (~99K vertices) stored uncompressed (no Draco or
