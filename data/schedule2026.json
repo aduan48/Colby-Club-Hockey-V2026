@@ -74,7 +74,7 @@
     "logofile": "une",
     "location": "at",
     "opponent": "University of New England",
-    "date": "Dec 12th, 7 PM",
+    "date": "Dec 5th, 6:30 PM",
     "score": ""
   },
   {
@@ -96,6 +96,13 @@
     "location": "at",
     "opponent": "Central Maine Community College",
     "date": "Jan 27th, 7 PM",
+    "score": ""
+  },
+  {
+    "logofile": "une",
+    "location": "vs",
+    "opponent": "University of New England",
+    "date": "Feb 5th, 7 PM",
     "score": ""
   },
   {
